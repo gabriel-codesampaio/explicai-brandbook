@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Brand book do Explicaí, o construtor de manuais open source e gratuito.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%232B4FE0%22/%3E%3Crect%20x%3D%2226%22%20y%3D%2227%22%20width%3D%2211%22%20height%3D%2225%22%20rx%3D%222.5%22%20fill%3D%22%23fff%22/%3E%3Cpath%20d%3D%22M27.5%2022%20L35.5%2022%20L44.5%209.5%20L36.5%209.5%20Z%22%20fill%3D%22%23FFD43B%22/%3E%3C/svg%3E">
+<title>Explicaí Brand Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: brand book em coluna única; cada seção tem rótulo à esquerda e conteúdo à direita, empilhando no celular. */
+:root {
+  --papel: #F5F6FA;
+  --superficie: #FFFFFF;
+  --tinta: #151A33;
+  --grafite: #575E78;
+  --linha: #DCE0EB;
+  --cobalto: #2B4FE0;
+  --marca: #FFD43B;
+  --coral: #C8411F;
+  --acento: #2B4FE0;
+  --sobre-cobalto: #FFFFFF;
+  --realce: rgba(255, 212, 59, .55);
+
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-texto: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --papel: #0E1120;
+    --superficie: #161A2E;
+    --tinta: #ECEEF7;
+    --grafite: #9CA3BD;
+    --linha: #2A3050;
+    --cobalto: #7088FF;
+    --coral: #FF7F63;
+    --acento: #FFD43B;
+    --sobre-cobalto: #0E1120;
+    --realce: rgba(255, 212, 59, .28);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --papel: #0E1120;
+  --superficie: #161A2E;
+  --tinta: #ECEEF7;
+  --grafite: #9CA3BD;
+  --linha: #2A3050;
+  --cobalto: #7088FF;
+  --coral: #FF7F63;
+  --acento: #FFD43B;
+  --sobre-cobalto: #0E1120;
+  --realce: rgba(255, 212, 59, .28);
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--f-texto);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1100px; margin: 0 auto; padding-block: 48px 96px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.1; }
+h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; font-stretch: 112%; font-variation-settings: "wdth" 112; letter-spacing: -.02em; }
+h3 { font-size: 19px; font-weight: 700; font-stretch: 105%; font-variation-settings: "wdth" 105; }
+p { margin: 0; max-width: 65ch; }
+.lead { font-size: 19px; color: var(--grafite); }
+.mono { font-family: var(--f-mono); font-size: 13.5px; }
+.rot { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--grafite); }
+mark { background: linear-gradient(transparent 55%, var(--realce) 55%); color: inherit; padding: 0 .1em; }
+code { font-family: var(--f-mono); font-size: .88em; background: var(--superficie); border: 1px solid var(--linha); border-radius: 4px; padding: .05em .35em; }
+
+/* ---------- wordmark ---------- */
+.wm {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-stretch: 112%;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -.035em;
+  line-height: 1;
+  color: var(--tinta);
+  white-space: nowrap;
+}
+.wm .i { position: relative; display: inline-block; }
+.wm .i::after {
+  content: "";
+  position: absolute;
+  left: .06em;
+  bottom: .77em;
+  width: .115em;
+  height: .19em;
+  background: var(--acento);
+  transform: skewX(-32deg);
+  transform-origin: bottom left;
+  border-radius: .015em;
+}
+.on-cobalto .wm { color: #FFFFFF; }
+.on-cobalto .wm .i::after { background: #FFD43B; }
+.on-tinta .wm { color: #F5F6FA; }
+.on-tinta .wm .i::after { background: #FFD43B; }
+.on-papel .wm { color: #151A33; }
+.on-papel .wm .i::after { background: #2B4FE0; }
+
+.lockup { display: inline-flex; align-items: center; gap: .32em; }
+.lockup svg { width: 1.05em; height: 1.05em; flex: none; }
+.lockup .sub { font-family: var(--f-display); font-weight: 500; font-stretch: 100%; font-variation-settings: "wdth" 100; letter-spacing: 0; color: var(--grafite); margin-left: .1em; }
+
+/* ---------- hero ---------- */
+.hero { display: grid; gap: 40px; padding-bottom: 56px; border-bottom: 1px solid var(--linha); }
+.hero-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; }
+.hero .wm { font-size: clamp(64px, 13vw, 156px); }
+.hero-txt { display: grid; gap: 14px; }
+.tagline { font-family: var(--f-display); font-size: clamp(22px, 3vw, 30px); font-weight: 600; font-stretch: 100%; line-height: 1.25; max-width: 30ch; }
+
+/* ---------- mock anotado ---------- */
+.demo { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.janela { background: var(--superficie); border: 1px solid var(--linha); border-radius: 10px; overflow: hidden; box-shadow: 0 18px 40px -24px rgba(21, 26, 51, .35); }
+.barra { display: flex; align-items: center; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--linha); }
+.barra i { width: 9px; height: 9px; border-radius: 50%; background: var(--linha); }
+.barra span { margin-left: 8px; font-size: 12px; color: var(--grafite); font-family: var(--f-mono); }
+.app { display: grid; grid-template-columns: 130px 1fr; min-height: 250px; }
+.lateral { border-right: 1px solid var(--linha); padding: 14px 10px; display: grid; gap: 4px; align-content: start; font-size: 13px; color: var(--grafite); }
+.lateral div { padding: 6px 8px; border-radius: 6px; }
+.lateral .ativo { background: var(--papel); color: var(--tinta); font-weight: 700; }
+.conteudo { padding: 18px; display: grid; gap: 14px; align-content: start; }
+.linha-topo { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.linha-topo b { font-family: var(--f-display); font-size: 17px; }
+.btn-fake { font-size: 13px; font-weight: 700; padding: 7px 12px; border-radius: 6px; background: var(--tinta); color: var(--papel); }
+.busca { font-size: 13px; color: var(--grafite); padding: 8px 10px; border: 1px solid var(--linha); border-radius: 6px; }
+.tabela { display: grid; gap: 0; font-size: 13px; }
+.tabela div { display: grid; grid-template-columns: 1fr 90px 60px; padding: 8px 4px; border-bottom: 1px solid var(--linha); }
+.tabela div:first-child { color: var(--grafite); font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; }
+.alvo { position: relative; outline: 2px dashed var(--cobalto); outline-offset: 4px; border-radius: 6px; }
+.mk {
+  position: absolute; top: -17px; right: -17px;
+  width: 24px; height: 24px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--cobalto); color: var(--sobre-cobalto);
+  font: 600 12px/1 var(--f-mono);
+  box-shadow: 0 0 0 3px var(--superficie);
+}
+.legenda { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.legenda li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; }
+.legenda .mk { position: static; box-shadow: none; }
+.legenda b { display: block; font-family: var(--f-display); font-size: 15px; }
+.legenda p { font-size: 14px; color: var(--grafite); }
+.nota-demo { font-size: 13px; color: var(--grafite); margin-top: 6px; }
+
+/* ---------- seções ---------- */
+section { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; padding-block: 64px; border-bottom: 1px solid var(--linha); }
+section > .rot { padding-top: 10px; }
+.corpo { display: grid; gap: 28px; }
+.grade-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.grade-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.grade-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+
+.declaracao { font-family: var(--f-display); font-size: clamp(20px, 2.4vw, 26px); font-weight: 500; font-stretch: 100%; line-height: 1.4; max-width: 46ch; }
+.traco { display: grid; gap: 8px; padding-top: 14px; border-top: 2px solid var(--tinta); }
+.traco p { font-size: 15px; color: var(--grafite); }
+.traco .nao { font-size: 13.5px; }
+.traco .nao b { color: var(--coral); font-weight: 700; }
+
+/* nome */
+.regras { width: 100%; border-collapse: collapse; font-size: 15px; }
+.regras th, .regras td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--linha); vertical-align: top; }
+.regras th { font-weight: 400; color: var(--grafite); width: 34%; }
+.tab-scroll { overflow-x: auto; }
+.pron { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; font-family: var(--f-display); font-size: 28px; font-weight: 600; }
+.pron .t { color: var(--cobalto); font-weight: 800; }
+
+/* logo */
+.pranchas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.prancha { border-radius: 12px; padding: 40px 24px; display: grid; place-items: center; min-height: 190px; position: relative; }
+.prancha .rot { position: absolute; left: 14px; bottom: 10px; font-size: 11.5px; }
+.prancha .wm { font-size: clamp(36px, 5vw, 54px); }
+.on-papel { background: #F5F6FA; border: 1px solid #DCE0EB; }
+.on-papel .rot { color: #575E78; }
+.on-cobalto { background: #2B4FE0; }
+.on-cobalto .rot { color: rgba(255, 255, 255, .75); }
+.on-tinta { background: #151A33; }
+.on-tinta .rot { color: #9CA3BD; }
+.on-marca { background: #FFD43B; }
+.on-marca .rot { color: #4A3D00; }
+.on-marca .wm { color: #151A33; }
+.on-marca .wm .i::after { background: #151A33; }
+
+.construcao { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; }
+.construcao svg { width: 100%; height: auto; max-width: 220px; }
+.passos { display: grid; gap: 14px; }
+.passos div { display: grid; grid-template-columns: 24px 1fr; gap: 12px; }
+.passos .mk { position: static; box-shadow: none; }
+.passos p { font-size: 15px; }
+
+.tamanhos { display: flex; flex-wrap: wrap; align-items: end; gap: 24px; }
+.tamanhos figure { margin: 0; display: grid; gap: 6px; justify-items: center; }
+.tamanhos figcaption { font-family: var(--f-mono); font-size: 11px; color: var(--grafite); }
+
+.erros { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.erro { display: grid; gap: 10px; }
+.erro .caixa { border: 1px solid var(--linha); background: var(--superficie); border-radius: 10px; min-height: 96px; display: grid; place-items: center; position: relative; overflow: hidden; padding: 12px; }
+.erro .caixa::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1px), var(--coral) calc(50% - 1px), var(--coral) calc(50% + 1px), transparent calc(50% + 1px)); opacity: .7; }
+.erro p { font-size: 13.5px; color: var(--grafite); }
+.erro .wm { font-size: 26px; }
+
+/* família */
+.familia { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.produto { background: var(--superficie); border: 1px solid var(--linha); border-radius: 12px; padding: 28px 24px; display: grid; gap: 16px; align-content: start; }
+.produto .lockup { font-size: 34px; }
+.produto .wm { font-size: 34px; }
+.produto dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; }
+.produto dt { color: var(--grafite); }
+.produto dd { margin: 0; font-family: var(--f-mono); font-size: 13px; overflow-wrap: anywhere; }
+
+/* cores */
+.cores { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.cor { border-radius: 12px; overflow: hidden; border: 1px solid var(--linha); background: var(--superficie); }
+.cor .amostra { height: 120px; padding: 14px; display: flex; align-items: flex-end; font-family: var(--f-display); font-weight: 700; font-size: 20px; }
+.cor .info { padding: 14px; display: grid; gap: 4px; font-size: 14px; }
+.cor .info .mono { color: var(--grafite); font-size: 12.5px; }
+.proporcao { display: flex; height: 40px; border-radius: 8px; overflow: hidden; border: 1px solid var(--linha); }
+.proporcao div { display: grid; place-items: center; font-family: var(--f-mono); font-size: 11px; }
+
+/* tipografia */
+.fonte { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid var(--linha); }
+.fonte:last-child { border-bottom: 0; padding-bottom: 0; }
+.fonte .meta { display: grid; gap: 4px; align-content: start; font-size: 14px; color: var(--grafite); }
+.fonte .meta b { color: var(--tinta); font-size: 16px; }
+.esp-display { font-family: var(--f-display); font-size: clamp(34px, 5vw, 52px); font-weight: 800; font-stretch: 112%; font-variation-settings: "wdth" 112; letter-spacing: -.02em; line-height: 1.05; }
+.esp-texto { font-size: 17px; max-width: 60ch; }
+.esp-mono { font-family: var(--f-mono); font-size: 14px; background: var(--superficie); border: 1px solid var(--linha); border-radius: 8px; padding: 14px 16px; overflow-x: auto; white-space: pre; line-height: 1.7; }
+.esp-mono .c { color: var(--grafite); }
+.esp-mono .k { color: var(--cobalto); font-weight: 600; }
+
+/* voz */
+.voz { width: 100%; border-collapse: collapse; font-size: 15px; }
+.voz th { text-align: left; font-weight: 400; padding: 0 12px 10px; }
+.voz td { padding: 14px 12px; border-top: 1px solid var(--linha); vertical-align: top; }
+.voz td:first-child { color: var(--grafite); font-size: 13.5px; width: 18%; }
+.voz .sim { font-weight: 500; }
+.voz .nao { color: var(--grafite); text-decoration: line-through; text-decoration-color: var(--coral); }
+
+/* aplicações */
+.apps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.peca { display: grid; gap: 10px; }
+.peca p { font-size: 13.5px; color: var(--grafite); }
+.social { aspect-ratio: 2 / 1; max-width: 100%; border-radius: 10px; background: #2B4FE0; color: #FFFFFF; padding: 7% 7%; display: grid; align-content: space-between; overflow: hidden; position: relative; }
+.social .wm { font-size: clamp(26px, 4vw, 40px); color: #FFFFFF; }
+.social .wm .i::after { background: #FFD43B; }
+.social .frase { font-family: var(--f-display); font-weight: 600; font-size: clamp(13px, 1.7vw, 17px); max-width: 26ch; line-height: 1.3; }
+.social .repo { font-family: var(--f-mono); font-size: clamp(9px, 1.1vw, 11.5px); color: rgba(255, 255, 255, .8); }
+.social .bolhas { position: absolute; right: 7%; top: 18%; display: grid; gap: 10px; }
+.social .bolhas span { width: clamp(20px, 3vw, 30px); height: clamp(20px, 3vw, 30px); border-radius: 50%; background: #FFD43B; color: #151A33; display: grid; place-items: center; font: 600 clamp(10px, 1.3vw, 13px)/1 var(--f-mono); }
+.capa { aspect-ratio: 1200 / 630; max-width: 100%; border-radius: 10px; background: #151A33; color: #F5F6FA; padding: 6% 7%; display: grid; align-content: space-between; overflow: hidden; }
+.capa .topo { display: flex; justify-content: space-between; gap: 10px; font-family: var(--f-mono); font-size: clamp(9px, 1.1vw, 11.5px); color: #9CA3BD; }
+.capa h3 { font-size: clamp(18px, 3vw, 30px); font-weight: 800; font-stretch: 112%; font-variation-settings: "wdth" 112; letter-spacing: -.02em; line-height: 1.1; color: #F5F6FA; }
+.capa h3 em { font-style: normal; background: linear-gradient(transparent 60%, rgba(255, 212, 59, .45) 60%); }
+.capa .lockup { font-size: clamp(14px, 2vw, 20px); }
+.capa .wm { color: #F5F6FA; }
+.capa .wm .i::after { background: #FFD43B; }
+.readme { background: var(--superficie); border: 1px solid var(--linha); border-radius: 10px; padding: 20px; display: grid; gap: 10px; }
+.readme .lockup { font-size: 30px; }
+.readme .wm { font-size: 30px; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badges span { font-family: var(--f-mono); font-size: 11px; border-radius: 4px; overflow: hidden; display: inline-flex; }
+.badges span i { font-style: normal; padding: 3px 7px; background: #575E78; color: #FFFFFF; }
+.badges span b { font-weight: 600; padding: 3px 7px; background: #2B4FE0; color: #FFFFFF; }
+.fav { display: flex; gap: 12px; align-items: center; background: var(--superficie); border: 1px solid var(--linha); border-radius: 10px; padding: 16px 20px; }
+.aba { display: flex; align-items: center; gap: 8px; background: var(--papel); border: 1px solid var(--linha); border-radius: 8px 8px 0 0; padding: 8px 14px; font-size: 13px; min-width: 0; }
+.aba span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.regras.t3 th { width: auto; color: var(--tinta); font-weight: 700; }
+.regras.t3 td:last-child { color: var(--grafite); }
+.regras thead th { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--grafite); font-weight: 400; }
+.arco { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: arco; }
+.arco li { display: grid; grid-template-columns: 24px 140px 1fr; gap: 14px; align-items: baseline; padding-block: 12px; border-bottom: 1px solid var(--linha); font-size: 15px; }
+.arco .mk { position: static; box-shadow: none; align-self: center; }
+.arco b { font-family: var(--f-display); }
+.historia { font-family: var(--f-display); font-size: clamp(18px, 2.1vw, 22px); font-weight: 500; line-height: 1.5; max-width: 52ch; padding-left: 20px; border-left: 3px solid var(--marca); margin: 0; }
+footer { padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13.5px; color: var(--grafite); }
+
+@media (max-width: 860px) {
+  section { grid-template-columns: 1fr; gap: 16px; padding-block: 48px; }
+  .demo, .construcao, .fonte { grid-template-columns: 1fr; }
+  .arco li { grid-template-columns: 24px 1fr; }
+  .arco li span:last-child { grid-column: 2; }
+  .grade-4, .erros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grade-3, .cores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .pranchas, .familia, .apps, .grade-2, .grade-3, .cores { grid-template-columns: 1fr; }
+  .app { grid-template-columns: 1fr; }
+  .lateral { display: none; }
+  .tabela div { grid-template-columns: 1fr 70px 44px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero .mk { animation: surge .5s cubic-bezier(.2, .9, .3, 1.3) both; }
+  .hero .alvo:nth-of-type(2) .mk { animation-delay: .12s; }
+  @keyframes surge { from { transform: scale(.4); } to { transform: scale(1); } }
+}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="simbolo-studio" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="16" fill="#2B4FE0"/>
+      <rect x="26" y="27" width="11" height="25" rx="2.5" fill="#FFFFFF"/>
+      <path d="M27.5 22 L35.5 22 L44.5 9.5 L36.5 9.5 Z" fill="#FFD43B" stroke="#FFD43B" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="simbolo-agent" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="16" fill="#151A33"/>
+      <rect x="26" y="27" width="11" height="25" rx="2.5" fill="#FFFFFF"/>
+      <path d="M27.5 22 L35.5 22 L44.5 9.5 L36.5 9.5 Z" fill="#FFD43B" stroke="#FFD43B" stroke-width="1.5" stroke-linejoin="round"/>
+      <rect x="44" y="45" width="9" height="3.5" rx="1.2" fill="#FFD43B"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-top">
+      <span class="rot">Brand book · v0.2 · outubro de 2026</span>
+      <span class="rot">Open source · um projeto codesampa.io</span>
+    </div>
+    <div class="hero-txt">
+      <div class="wm" aria-label="Explicaí">explica<span class="i">ı</span></div>
+      <p class="tagline">Tira o print, que o Explicaí explica.</p>
+      <p class="lead">Construtor de manuais open source e gratuito. Vai do print ao manual pronto em PDF, HTML e Markdown, e uma IA também consegue montar o manual pelo MCP.</p>
+    </div>
+
+    <div class="demo" aria-label="Exemplo de tela anotada no estilo Explicaí">
+      <div class="janela">
+        <div class="barra"><i></i><i></i><i></i><span>Financeiro › Clientes</span></div>
+        <div class="app">
+          <div class="lateral">
+            <div>Painel</div>
+            <div class="ativo">Clientes</div>
+            <div>Cobranças</div>
+            <div>Relatórios</div>
+          </div>
+          <div class="conteudo">
+            <div class="linha-topo">
+              <b>Clientes</b>
+              <span class="btn-fake alvo">+ Novo cliente<span class="mk">1</span></span>
+            </div>
+            <div class="busca alvo">Buscar por nome ou CPF…<span class="mk">2</span></div>
+            <div class="tabela">
+              <div><span>Nome</span><span>Situação</span><span>Saldo</span></div>
+              <div><span>Ana Ribeiro</span><span>Em dia</span><span>R$ 0</span></div>
+              <div><span>Oficina Pereira</span><span>Atrasado</span><span>R$ 480</span></div>
+              <div><span>Marcos Tavares</span><span>Em dia</span><span>R$ 0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ol class="legenda">
+          <li><span class="mk">1</span><div><b>Novo cliente</b><p>Abre o cadastro em branco. Os campos com asterisco são obrigatórios.</p></div></li>
+          <li><span class="mk">2</span><div><b>Busca</b><p>Filtra a lista enquanto você digita. Aceita nome, CPF ou CNPJ.</p></div></li>
+        </ol>
+        <p class="nota-demo">Exemplo fictício de uma página de manual feita no Explicaí: a tela, os marcadores numerados e a legenda de cada um.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="essencia">
+    <span class="rot">Essência</span>
+    <div class="corpo">
+      <p class="declaracao">Documentar um sistema não pode custar mais que <mark>construí-lo</mark>.</p>
+      <div class="tab-scroll">
+        <table class="regras">
+          <tr><th>Posicionamento</th><td>Para devs e software houses que precisam entregar manual sem parar o desenvolvimento, o Explicaí é o construtor de manuais open source e gratuito que vai do print ao manual pronto em PDF, HTML e Markdown.</td></tr>
+          <tr><th>Frase-resumo (uso interno)</th><td>O construtor de manuais aberto que deixa a documentação andar no ritmo do código.</td></tr>
+          <tr><th>Categoria</th><td>Construtor de manuais</td></tr>
+          <tr><th>Primeira coisa a dizer</th><td>É open source e gratuito.</td></tr>
+          <tr><th>Para quem</th><td>Quem constrói ou mantém software e precisa entregar manual sem ter um time de documentação: dev solo ou equipe pequena de SaaS, software house e redator técnico ou analista de suporte, com o mesmo peso.</td></tr>
+          <tr><th>Quando procuram</th><td>Quando o sistema vai para o ar sem manual, quando o cliente pede o manual na entrega e quando a tela muda e o manual fica velho.</td></tr>
+          <tr><th>Idiomas</th><td>Português e inglês desde o primeiro dia.</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="personalidade">
+    <span class="rot">Personalidade</span>
+    <div class="corpo">
+      <h2>O professor que você gostava</h2>
+      <p class="lead">O Explicaí sabe muito e explica com calma, na ordem em que você vai usar. De vez em quando solta uma piada. Começa pelo exemplo e deixa a teoria para depois.</p>
+      <div class="tab-scroll">
+        <table class="regras t3">
+          <thead><tr><th>Traço</th><th>Como aparece</th><th>Onde passa do ponto</th></tr></thead>
+          <tbody>
+            <tr><th>Didático</th><td>Uma coisa por vez, na ordem de uso</td><td>Vira aula cheia de jargão</td></tr>
+            <tr><th>Paciente</th><td>Não supõe que o leitor já sabe</td><td>Fica condescendente</td></tr>
+            <tr><th>Preciso</th><td>Cada passo funciona e cada marcador aponta para o lugar certo</td><td>Aceita "mais ou menos isso aqui"</td></tr>
+            <tr><th>Aberto</th><td>Código e processo à vista, no GitHub e no blog</td><td>Esconde decisões e promete sem mostrar</td></tr>
+            <tr><th>Bem-humorado</th><td>Uma tirada quando cabe, como o slogan</td><td>Piada em botão, erro ou passo de manual</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="nome">
+    <span class="rot">Nome</span>
+    <div class="corpo">
+      <h2>De "explica aí" para Explicaí</h2>
+      <p class="lead">O nome vem da pergunta de quem trava num sistema: "explica aí?". O acento no í virou o símbolo da marca, e a palavra tem "IA" dentro.</p>
+      <div class="pron"><span>ex</span>·<span>pli</span>·<span>ca</span>·<span class="t">Í</span><span class="mono" style="font-size:13px;font-weight:400;color:var(--grafite)">tônica no í, como em "aí" · em inglês: ex-plee-kah-EE</span></div>
+      <div class="tab-scroll">
+        <table class="regras">
+          <tr><th>Em texto corrido</th><td><b>Explicaí</b>, com E maiúsculo e acento</td></tr>
+          <tr><th>No logo</th><td><b>explicaí</b>, tudo em minúsculas</td></tr>
+          <tr><th>Código, domínio, pacotes</th><td><code>explicai</code>, sem acento</td></tr>
+          <tr><th>Nunca</th><td>ExplicAI, Explicai, EXPLICAÍ, Explica Aí</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="logo">
+    <span class="rot">Logo</span>
+    <div class="corpo">
+      <h2>O acento é o marcador</h2>
+      <div class="construcao">
+        <svg viewBox="0 0 64 64" role="img" aria-label="Símbolo do Explicaí"><use href="#simbolo-studio"/></svg>
+        <div class="passos">
+          <div><span class="mk">1</span><p><b>O quadro</b> de cantos arredondados é a tela que vai ser documentada.</p></div>
+          <div><span class="mk">2</span><p><b>A haste do i</b> é o conteúdo do manual.</p></div>
+          <div><span class="mk">3</span><p><b>O acento</b> inclinado é o ponteiro que mostra onde olhar. É amarelo de marca-texto porque marca o destaque.</p></div>
+        </div>
+      </div>
+
+      <div class="pranchas">
+        <div class="prancha on-papel"><span class="wm">explica<span class="i">ı</span></span><span class="rot">Principal · fundo claro</span></div>
+        <div class="prancha on-tinta"><span class="wm">explica<span class="i">ı</span></span><span class="rot">Fundo escuro</span></div>
+        <div class="prancha on-cobalto"><span class="wm">explica<span class="i">ı</span></span><span class="rot">Fundo cobalto</span></div>
+        <div class="prancha on-marca"><span class="wm">explica<span class="i">ı</span></span><span class="rot">Monocromático, uso pontual</span></div>
+      </div>
+
+      <div class="grade-2">
+        <div class="traco">
+          <h3>Área de proteção</h3>
+          <p>Em volta do logo, deixe um espaço livre igual à altura do acento. Nada de texto, borda ou imagem dentro dele.</p>
+        </div>
+        <div class="traco">
+          <h3>Tamanho mínimo</h3>
+          <p>O logo completo começa em 96 px de largura. Abaixo disso, use só o símbolo, que funciona até 16 px como favicon.</p>
+        </div>
+      </div>
+
+      <div class="tamanhos" aria-label="Símbolo em tamanhos reduzidos">
+        <figure><svg width="64" height="64"><use href="#simbolo-studio"/></svg><figcaption>64 px</figcaption></figure>
+        <figure><svg width="48" height="48"><use href="#simbolo-studio"/></svg><figcaption>48 px</figcaption></figure>
+        <figure><svg width="32" height="32"><use href="#simbolo-studio"/></svg><figcaption>32 px</figcaption></figure>
+        <figure><svg width="24" height="24"><use href="#simbolo-studio"/></svg><figcaption>24 px</figcaption></figure>
+        <figure><svg width="16" height="16"><use href="#simbolo-studio"/></svg><figcaption>16 px</figcaption></figure>
+      </div>
+
+      <div class="erros">
+        <div class="erro"><div class="caixa"><span class="wm">ExplicAI</span></div><p>Não escreva "AI" em maiúsculas.</p></div>
+        <div class="erro"><div class="caixa"><span class="wm" style="display:inline-block;transform:scaleX(1.5)">explica<span class="i">ı</span></span></div><p>Não estique nem comprima.</p></div>
+        <div class="erro"><div class="caixa"><span class="wm" style="color:var(--coral)">explica<span class="i">ı</span></span></div><p>Não use cores fora da paleta.</p></div>
+        <div class="erro"><div class="caixa"><span class="wm">explica<span class="i">ı</span></span><span class="mono" style="position:absolute;bottom:8px;font-size:11px">.com.br</span></div><p>Não cole nada ao logo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="familia">
+    <span class="rot">Família</span>
+    <div class="corpo">
+      <h2>Um nome, dois projetos</h2>
+      <p class="lead">O app e o agente usam o mesmo símbolo com fundos diferentes: cobalto no Studio, que você usa na tela, e nanquim no Agent, que a IA usa pelo terminal.</p>
+      <div class="familia">
+        <div class="produto">
+          <span class="lockup"><svg><use href="#simbolo-studio"/></svg><span class="wm">explica<span class="i">ı</span></span><span class="sub">studio</span></span>
+          <p>O app de construção de manuais: captura de tela, marcadores, legendas, temas e exportação.</p>
+          <dl>
+            <dt>Repositório</dt><dd>github.com/gabriel-codesampaio/explicai</dd>
+            <dt>Pacote</dt><dd>explicai</dd>
+            <dt>Para quem</dt><dd style="font-family:var(--f-texto);font-size:14px">quem escreve o manual</dd>
+          </dl>
+        </div>
+        <div class="produto">
+          <span class="lockup"><svg><use href="#simbolo-agent"/></svg><span class="wm">explica<span class="i">ı</span></span><span class="sub">agent</span></span>
+          <p>O servidor MCP que deixa uma IA operar o Studio: abrir o sistema, capturar as telas, anotar e montar o manual.</p>
+          <dl>
+            <dt>Repositório</dt><dd>github.com/gabriel-codesampaio/explicai-mcp</dd>
+            <dt>Pacote</dt><dd>explicai-mcp</dd>
+            <dt>Para quem</dt><dd style="font-family:var(--f-texto);font-size:14px">agentes de IA e quem configura esses agentes</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="tab-scroll">
+        <table class="regras">
+          <tr><th>Assinatura</th><td>"um projeto codesampa.io", com link, no rodapé do site e do README</td></tr>
+          <tr><th>Créditos</th><td>Gabriel Sampaio como autor no GitHub, na licença e no <code>package.json</code></td></tr>
+          <tr><th>Sem assinatura</th><td>Interface do app e manuais gerados</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="cores">
+    <span class="rot">Cores</span>
+    <div class="corpo">
+      <h2>Caneta azul e marca-texto</h2>
+      <p class="lead">A paleta vem da mesa de quem revisa manual. A caneta azul aponta, o marca-texto destaca e o nanquim fica com o texto.</p>
+      <div class="cores">
+        <div class="cor"><div class="amostra" style="background:#2B4FE0;color:#FFFFFF">Cobalto</div><div class="info"><span>Marcadores, links, ações principais</span><span class="mono">#2B4FE0 · rgb 43 79 224</span></div></div>
+        <div class="cor"><div class="amostra" style="background:#FFD43B;color:#151A33">Marca-texto</div><div class="info"><span>O acento, destaques, realce de texto</span><span class="mono">#FFD43B · rgb 255 212 59</span></div></div>
+        <div class="cor"><div class="amostra" style="background:#151A33;color:#F5F6FA">Nanquim</div><div class="info"><span>Texto, fundos escuros, o Agent</span><span class="mono">#151A33 · rgb 21 26 51</span></div></div>
+        <div class="cor"><div class="amostra" style="background:#F5F6FA;color:#151A33;border-bottom:1px solid #DCE0EB">Papel</div><div class="info"><span>Fundo de páginas e manuais</span><span class="mono">#F5F6FA · rgb 245 246 250</span></div></div>
+        <div class="cor"><div class="amostra" style="background:#575E78;color:#FFFFFF">Grafite</div><div class="info"><span>Texto secundário, legendas</span><span class="mono">#575E78 · rgb 87 94 120</span></div></div>
+        <div class="cor"><div class="amostra" style="background:#C8411F;color:#FFFFFF">Coral</div><div class="info"><span>Só para alertas e exemplos do que não fazer</span><span class="mono">#C8411F · rgb 200 65 31</span></div></div>
+      </div>
+      <div class="tab-scroll">
+        <table class="regras">
+          <thead><tr><th>Tema escuro</th><th>Troca</th></tr></thead>
+          <tr><th>Fundo</th><td><span class="mono">#0E1120</span> no lugar do papel e <span class="mono">#161A2E</span> nas superfícies</td></tr>
+          <tr><th>Texto</th><td><span class="mono">#ECEEF7</span> no lugar do nanquim e <span class="mono">#9CA3BD</span> no lugar do grafite</td></tr>
+          <tr><th>Cobalto</th><td><span class="mono">#7088FF</span>, com número do marcador em <span class="mono">#0E1120</span></td></tr>
+          <tr><th>Acento do logo</th><td>Marca-texto <span class="mono">#FFD43B</span>, também no wordmark</td></tr>
+          <tr><th>Coral</th><td><span class="mono">#FF7F63</span></td></tr>
+        </table>
+      </div>
+      <div style="display:grid;gap:8px">
+        <span class="rot">Proporção de uso</span>
+        <div class="proporcao" aria-label="Papel 60%, Nanquim 25%, Cobalto 10%, Marca-texto 5%">
+          <div style="flex:60;background:#F5F6FA;color:#575E78">papel 60%</div>
+          <div style="flex:25;background:#151A33;color:#F5F6FA">nanquim 25%</div>
+          <div style="flex:10;background:#2B4FE0;color:#FFFFFF">10%</div>
+          <div style="flex:5;background:#FFD43B;color:#151A33">5%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tipografia">
+    <span class="rot">Tipografia</span>
+    <div class="corpo">
+      <h2>Archivo nos títulos, Atkinson no texto</h2>
+      <div class="fonte">
+        <div class="meta"><b>Archivo Expanded</b><span>Títulos e logo</span><span class="mono">wdth 112 · peso 800</span></div>
+        <div class="esp-display">Como cadastrar um cliente novo</div>
+      </div>
+      <div class="fonte">
+        <div class="meta"><b>Atkinson Hyperlegible Next</b><span>Texto corrido e interface</span><span class="mono">16–19 px · peso 400/700</span></div>
+        <p class="esp-texto">Foi desenhada para quem enxerga pouco e separa bem as letras que costumam se confundir, como I, l e 1 ou O e 0. Num manual, cada letra precisa ser lida certo da primeira vez.</p>
+      </div>
+      <div class="fonte">
+        <div class="meta"><b>JetBrains Mono</b><span>Código, comandos, nomes de arquivo</span><span class="mono">13–14 px · peso 400/600</span></div>
+        <div class="esp-mono"><span class="c"># instalar o agente</span>
+<span class="k">npx</span> explicai-mcp init
+<span class="c"># capturar a tela atual e anotar</span>
+<span class="k">explicai</span> capture --annotate</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="voz">
+    <span class="rot">Voz</span>
+    <div class="corpo">
+      <h2>Formal no app, solto no blog</h2>
+      <p class="lead">Uma ideia por frase, voz ativa e "você" no lugar de "o usuário". O botão diz o que vai acontecer, e o erro diz o que deu errado e como resolver. O humor aparece no site e no blog, nunca numa mensagem de erro ou num passo de manual. O Explicaí não se compara com outras ferramentas.</p>
+      <div class="tab-scroll">
+        <table class="regras">
+          <tr><th>App, README e docs</th><td>Formal, com "você" e verbo no imperativo</td></tr>
+          <tr><th>Site</th><td>Formal, com humor pontual. O slogan fica em português também na versão em inglês.</td></tr>
+          <tr><th>Blog codesampa.io e redes</th><td>Coloquial, em primeira pessoa</td></tr>
+          <tr><th>Em inglês</th><td>Mesmas regras, com menos humor</td></tr>
+        </table>
+      </div>
+      <div class="tab-scroll">
+        <table class="voz">
+          <thead><tr><th></th><th class="rot">Diga</th><th class="rot">Evite</th></tr></thead>
+          <tbody>
+            <tr><td>Botão</td><td class="sim">Capturar tela</td><td class="nao">Iniciar processo de captura</td></tr>
+            <tr><td>Erro</td><td class="sim">Não achamos a janela "Financeiro". Abra o sistema e tente de novo.</td><td class="nao">Erro 0x80004005: falha na operação.</td></tr>
+            <tr><td>Lista vazia</td><td class="sim">Nenhum manual ainda. Tire o primeiro print para começar.</td><td class="nao">Não há registros a exibir.</td></tr>
+            <tr><td>Sucesso</td><td class="sim">Manual exportado em PDF.</td><td class="nao">Operação concluída com sucesso!</td></tr>
+            <tr><td>Blog</td><td class="sim">Hoje a IA errou feio no export para PDF. Mostro o que deu errado e como corrigi.</td><td class="nao">Revolucionando a documentação com IA de ponta.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Tom dos manuais gerados</h3>
+      <p>Quem gera o manual, no app ou pelo MCP, escolhe o tom. O mesmo passo nos três:</p>
+      <div class="tab-scroll">
+        <table class="regras">
+          <tr><th>Profissional (padrão)</th><td>Clique em <b>Novo cliente</b> para abrir o formulário de cadastro.</td></tr>
+          <tr><th>Tranquilo</th><td>Clica em <b>Novo cliente</b> e o cadastro abre na hora.</td></tr>
+          <tr><th>Personalizado</th><td>A pessoa descreve o tom em texto, por exemplo "como se explicasse para alguém que nunca usou computador", e a IA segue.</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="narrativa">
+    <span class="rot">Narrativa</span>
+    <div class="corpo">
+      <h2>A história que a marca conta</h2>
+      <p class="historia">Todo sistema precisa de manual, e quase nenhum tem um bom. Fazer à mão leva dias: tirar print, marcar a tela, escrever cada passo, exportar, e refazer tudo quando a tela muda. O Explicaí faz esse trabalho braçal. É open source e gratuito porque documentar um sistema não pode custar mais que construí-lo.</p>
+      <ol class="arco">
+        <li><span class="mk">1</span><b>Contexto</b><span>Todo sistema precisa de manual.</span></li>
+        <li><span class="mk">2</span><b>Problema</b><span>Fazer à mão leva dias, e o manual envelhece quando a tela muda.</span></li>
+        <li><span class="mk">3</span><b>Solução</b><span>O Explicaí captura, marca, escreve e exporta. Uma IA também consegue operar.</span></li>
+        <li><span class="mk">4</span><b>Convite</b><span>Tira o print, que o Explicaí explica. O código é aberto para usar e contribuir.</span></li>
+      </ol>
+      <p>Quem constrói o sistema é o protagonista e o Explicaí ajuda. A história é sempre a da marca: o blog conta a construção em primeira pessoa, mas não reconta a origem como história pessoal.</p>
+    </div>
+  </section>
+
+  <section id="aplicacoes">
+    <span class="rot">Aplicações</span>
+    <div class="corpo">
+      <h2>Primeiras peças</h2>
+      <div class="apps">
+        <div class="peca">
+          <div class="social">
+            <span class="wm">explica<span class="i">ı</span></span>
+            <div class="bolhas" aria-hidden="true"><span>1</span><span>2</span><span>3</span></div>
+            <span class="frase">Tira o print, que o Explicaí explica.</span>
+            <span class="repo">github.com/gabriel-codesampaio/explicai · open source</span>
+          </div>
+          <p>Social preview do GitHub, 1280 × 640.</p>
+        </div>
+        <div class="peca">
+          <div class="capa">
+            <div class="topo"><span>codesampa.io · diário de construção</span><span>parte 1</span></div>
+            <h3>Construindo um gerador de manuais <em>com IA</em>, do nome ao primeiro print</h3>
+            <span class="lockup"><svg><use href="#simbolo-studio"/></svg><span class="wm">explica<span class="i">ı</span></span></span>
+          </div>
+          <p>Capa de post no blog, 1200 × 630.</p>
+        </div>
+        <div class="peca">
+          <div class="readme">
+            <span class="lockup"><svg><use href="#simbolo-studio"/></svg><span class="wm">explica<span class="i">ı</span></span><span class="sub">studio</span></span>
+            <p style="font-size:14.5px">Construtor de manuais open source e gratuito. Do print ao manual pronto em PDF, HTML e Markdown.</p>
+            <div class="badges"><span><i>license</i><b>MIT</b></span><span><i>mcp</i><b>explicai-mcp</b></span><span><i>status</i><b>em construção</b></span></div>
+            <p class="mono" style="color:var(--grafite)">um projeto codesampa.io</p>
+          </div>
+          <p>Cabeçalho e rodapé do README.</p>
+        </div>
+        <div class="peca">
+          <div class="fav">
+            <div class="aba"><svg width="16" height="16" style="flex:none"><use href="#simbolo-studio"/></svg><span>Manual do Financeiro · Explicaí</span></div>
+            <div class="aba"><svg width="16" height="16" style="flex:none"><use href="#simbolo-agent"/></svg><span>Agent · Explicaí</span></div>
+          </div>
+          <p>Favicon do Studio e do Agent nas abas do navegador.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Explicaí · brand book v0.2 · um projeto codesampa.io</span>
+    <span>Base: brandbook mestre em brand/discovery/90_SYNTHESIS.md</span>
+  </footer>
+</div>
+
+</body>
+</html>
