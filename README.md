@@ -23,4 +23,8 @@ Ficam em [`logo/`](logo/). Os SVGs têm as letras convertidas em contorno, entã
 | `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Favicon e atalho no celular |
 | `social-preview.png` | Prévia no GitHub e em redes (1280 × 640) |
 
+## Estratégia da marca
+
+A pasta [`discovery/`](discovery/) guarda a entrevista de marca que deu origem ao brand book: [`90_SYNTHESIS.md`](discovery/90_SYNTHESIS.md) é a síntese e a fonte da verdade para site, README, app e blog; [`modules/`](discovery/modules/) tem os módulos de propósito, posicionamento, público, personalidade, voz e narrativa.
+
 Um projeto [codesampa.io](https://codesampa.io).
