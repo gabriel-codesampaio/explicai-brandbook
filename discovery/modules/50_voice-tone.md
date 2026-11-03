@@ -33,7 +33,7 @@
 |---|---|---|
 | App (interface) | formal, "você", imperativo | "Clique em Capturar para tirar o print da tela." |
 | README / docs | formal, direto | "Instale com `npx explicai-mcp init`." |
-| Site | formal, com humor pontual | "Tira o print, que o Explicaí explica." como assinatura |
+| Site | formal, com humor pontual | "Tira o print e explica. O Explicaí monta o manual." como assinatura |
 | Blog codesampa.io | coloquial, primeira pessoa | "Hoje a IA errou feio no export para PDF. Mostro o que deu errado." |
 | Redes | coloquial | — |
 
@@ -49,7 +49,9 @@
 
 ### Slogan
 
-**"Tira o print, que o Explicaí explica."** Em português nas duas línguas. No site e no README em inglês, vem acompanhado de uma linha descritiva em inglês (a definir com o posicionamento traduzido).
+**"Tira o print e explica. O Explicaí monta o manual."** Em português nas duas línguas. No site e no README em inglês, vem acompanhado de uma linha descritiva em inglês (a definir com o posicionamento traduzido).
+
+Troca de 2026-11-03: antes era "Tira o print, que o Explicaí explica." O antigo dava a entender que o Explicaí escreve a explicação; quem escreve é a pessoa. Detalhe na síntese, seção 10.
 
 ### Tons dos manuais gerados
 

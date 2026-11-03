@@ -11,7 +11,7 @@
 |---|---|
 | **Propósito** | Documentar um sistema não pode custar mais que construí-lo. |
 | **Frase-resumo (interna)** | O Explicaí é o construtor de manuais aberto que deixa a documentação andar no ritmo do código. |
-| **Slogan** | Tira o print, que o Explicaí explica. *(em português nas duas línguas)* |
+| **Slogan** | Tira o print e explica. O Explicaí monta o manual. *(em português nas duas línguas)* |
 | **Categoria** | Construtor de manuais |
 | **Diferencial principal** | Open source e gratuito |
 
@@ -109,3 +109,7 @@ Herói: quem constrói o sistema. Guia: o Explicaí.
 - O que as ferramentas testadas fizeram de errado (para a lista do que a marca não faz).
 - INPI: busca nas classes 9 e 42.
 - Atualizar o brand book visual para v0.2 conforme este documento.
+
+## 10. Histórico
+
+- 2026-11-03: slogan trocado de "Tira o print, que o Explicaí explica." para "Tira o print e explica. O Explicaí monta o manual." O antigo sugeria que o Explicaí escreve a explicação sozinho. Hoje quem cola o print, escreve o passo e marca a imagem é a pessoa; o Explicaí organiza, formata e exporta. Uma IA escrevendo só entra com o MCP, ainda em discovery. O texto antigo segue no post "Explicaí #1", que registra a decisão da época.

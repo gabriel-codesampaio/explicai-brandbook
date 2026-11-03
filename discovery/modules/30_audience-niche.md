@@ -54,5 +54,5 @@ Implicação para a marca: "Explicaí" precisa funcionar para quem não fala por
 
 ### Open questions
 
-- Versão em inglês do slogan "Tira o print, que o Explicaí explica." → módulo 50.
+- Versão em inglês do slogan "Tira o print e explica. O Explicaí monta o manual." → módulo 50.
 - Modelo de sustentação do "gratuito" (ver módulo 20).

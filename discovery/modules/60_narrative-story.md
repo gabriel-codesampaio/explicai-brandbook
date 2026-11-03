@@ -48,7 +48,7 @@ Régua para decidir recurso e mensagem: se algo faz o manual ficar para trás do
 | Contexto | Todo sistema precisa de manual |
 | Conflito | Fazer à mão leva dias, e o manual envelhece quando a tela muda |
 | Resolução | O Explicaí captura, marca, escreve e exporta, e uma IA também consegue operar |
-| Convite | "Tira o print, que o Explicaí explica." Use, contribua, é aberto |
+| Convite | "Tira o print e explica. O Explicaí monta o manual." Use, contribua, é aberto |
 
 Herói: quem constrói o sistema. Guia: o Explicaí (o professor que você gostava).
 
