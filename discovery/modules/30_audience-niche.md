@@ -50,9 +50,9 @@ O suporte sobrecarregado é consequência, não gatilho. Vale usar como argument
 ### Idioma
 
 Bilíngue desde o primeiro dia: app, README e site em PT-BR e EN. O blog codesampa.io segue em português.
-Implicação para a marca: "Explicaí" precisa funcionar para quem não fala português. Slogan e descrição curta precisam de versão em inglês. A pronúncia ("ex-pli-ka-EE") deve aparecer no README em inglês.
+Implicação para a marca: "Explicaí" precisa funcionar para quem não fala português. Slogan e descrição curta precisam de versão em inglês (o slogan já tem: "Snap it, explain it. Explicaí builds the manual."). A pronúncia ("ex-pli-ka-EE") deve aparecer no README em inglês.
 
 ### Open questions
 
-- Versão em inglês do slogan "Tira o print e explica. O Explicaí monta o manual." → módulo 50.
+- Versão em inglês do slogan: resolvida em 2026-11-03, "Snap it, explain it. Explicaí builds the manual." (módulo 50).
 - Modelo de sustentação do "gratuito" (ver módulo 20).

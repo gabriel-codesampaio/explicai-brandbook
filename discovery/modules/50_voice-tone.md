@@ -22,6 +22,7 @@
 
 - **P3:** A "Snap it. Explicaí explains it." · B "Take the screenshot. We'll explain the rest." · C "Screenshot in, manual out." · D slogan em português nas duas línguas
   - Gabriel: "D"
+  - Revisto em 2026-11-03: a pessoa decidiu ter slogan em inglês, "Snap it, explain it. Explicaí builds the manual.". A resposta D deixa de valer.
 
 ---
 
@@ -45,13 +46,13 @@
 4. Humor só onde não atrapalha a tarefa: nunca em erro, nunca em passo de manual.
 5. **Nunca citar nem comparar com concorrentes** (módulo 20).
 6. Sem hype: nada de "revolucionário", "de ponta", "mágico", "potencializar".
-7. Na versão em inglês, o humor fica mais contido. O slogan continua em português e funciona como assinatura.
+7. Na versão em inglês, o humor fica mais contido. O slogan em inglês é "Snap it, explain it. Explicaí builds the manual." e funciona como assinatura.
 
 ### Slogan
 
-**"Tira o print e explica. O Explicaí monta o manual."** Em português nas duas línguas. No site e no README em inglês, vem acompanhado de uma linha descritiva em inglês (a definir com o posicionamento traduzido).
+**"Tira o print e explica. O Explicaí monta o manual."** Cada língua usa o seu. Em inglês: **"Snap it, explain it. Explicaí builds the manual."** Quem explica é a pessoa; o Explicaí só monta o manual, nas duas versões.
 
-Troca de 2026-11-03: antes era "Tira o print, que o Explicaí explica." O antigo dava a entender que o Explicaí escreve a explicação; quem escreve é a pessoa. Detalhe na síntese, seção 10.
+Troca de 2026-11-03: antes era "Tira o print, que o Explicaí explica." O antigo dava a entender que o Explicaí escreve a explicação; quem escreve é a pessoa. Em 2026-11-03 entrou a versão em inglês e a regra de "slogan só em português" caiu. Detalhe na síntese, seção 10.
 
 ### Tons dos manuais gerados
 
@@ -65,5 +66,5 @@ Vale no app e no MCP (parâmetro de tom na ferramenta de geração). Os manuais 
 
 ### Open questions
 
-- Linha descritiva em inglês para acompanhar o slogan.
+- Linha descritiva em inglês: fechada em 2026-11-03 pelo slogan em inglês.
 - O tom padrão é Profissional? (assumido)

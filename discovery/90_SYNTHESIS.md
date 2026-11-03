@@ -11,7 +11,7 @@
 |---|---|
 | **Propósito** | Documentar um sistema não pode custar mais que construí-lo. |
 | **Frase-resumo (interna)** | O Explicaí é o construtor de manuais aberto que deixa a documentação andar no ritmo do código. |
-| **Slogan** | Tira o print e explica. O Explicaí monta o manual. *(em português nas duas línguas)* |
+| **Slogan** | PT: "Tira o print e explica. O Explicaí monta o manual." · EN: "Snap it, explain it. Explicaí builds the manual." *(cada língua usa o seu)* |
 | **Categoria** | Construtor de manuais |
 | **Diferencial principal** | Open source e gratuito |
 
@@ -104,7 +104,6 @@ Herói: quem constrói o sistema. Guia: o Explicaí.
 
 ## 9. Pendências
 
-- Linha descritiva em inglês para acompanhar o slogan.
 - Modelo de sustentação do "gratuito" (hospedagem? suporte? doações?).
 - O que as ferramentas testadas fizeram de errado (para a lista do que a marca não faz).
 - INPI: busca nas classes 9 e 42.
@@ -113,3 +112,4 @@ Herói: quem constrói o sistema. Guia: o Explicaí.
 ## 10. Histórico
 
 - 2026-11-03: slogan trocado de "Tira o print, que o Explicaí explica." para "Tira o print e explica. O Explicaí monta o manual." O antigo sugeria que o Explicaí escreve a explicação sozinho. Hoje quem cola o print, escreve o passo e marca a imagem é a pessoa; o Explicaí organiza, formata e exporta. Uma IA escrevendo só entra com o MCP, ainda em discovery. O texto antigo segue no post "Explicaí #1", que registra a decisão da época.
+- 2026-11-03: slogan ganha versão em inglês, "Snap it, explain it. Explicaí builds the manual.", e a regra "o slogan fica em português nas duas línguas" cai. A versão em inglês mantém o ritmo de duas frases curtas, com o verbo de quem age na primeira ("snap it, explain it": a pessoa tira e explica) e o Explicaí só no "builds the manual". Isso fecha a pendência da linha descritiva em inglês.
