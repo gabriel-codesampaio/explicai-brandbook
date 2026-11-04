@@ -1,6 +1,6 @@
 # Explicaí · brand book
 
-Identidade visual e verbal do [Explicaí](https://github.com/gabriel-codesampaio/explicai), o construtor de manuais open source e gratuito.
+Identidade visual e verbal do [Explicaí](https://github.com/gabriel-codesampaio/explicai-studio), o construtor de manuais open source e gratuito.
 
 Página publicada: https://gabriel-codesampaio.github.io/explicai-brandbook/
 
