@@ -30,6 +30,13 @@
   --acento: #2B4FE0;
   --sobre-cobalto: #FFFFFF;
   --realce: rgba(255, 212, 59, .55);
+  --cor-gray: #5C6478;
+  --cor-red: #C3261B;
+  --cor-orange: #B04A00;
+  --cor-green: #17793A;
+  --cor-blue: #1F58D6;
+  --cor-purple: #7A3CC8;
+  --aviso-tip: var(--cor-green); --aviso-warning: var(--cor-orange); --aviso-caution: var(--cor-red); --aviso-note: var(--cobalto);
 
   --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
   --f-texto: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, sans-serif;
@@ -48,6 +55,13 @@
     --acento: #FFD43B;
     --sobre-cobalto: #0E1120;
     --realce: rgba(255, 212, 59, .28);
+    --cor-gray: #A3AAC4;
+    --cor-red: #FF8B7E;
+    --cor-orange: #FFA95E;
+    --cor-green: #6FD193;
+    --cor-blue: #8EB1FF;
+    --cor-purple: #C9A2FF;
+    --aviso-tip: var(--cor-green); --aviso-warning: var(--cor-orange); --aviso-caution: var(--cor-red); --aviso-note: var(--cobalto);
   }
 }
 :root[data-theme="dark"] {
@@ -62,6 +76,13 @@
   --acento: #FFD43B;
   --sobre-cobalto: #0E1120;
   --realce: rgba(255, 212, 59, .28);
+  --cor-gray: #A3AAC4;
+  --cor-red: #FF8B7E;
+  --cor-orange: #FFA95E;
+  --cor-green: #6FD193;
+  --cor-blue: #8EB1FF;
+  --cor-purple: #C9A2FF;
+  --aviso-tip: var(--cor-green); --aviso-warning: var(--cor-orange); --aviso-caution: var(--cor-red); --aviso-note: var(--cobalto);
 }
 
 * { box-sizing: border-box; }
@@ -314,6 +335,20 @@ footer { padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: spa
   .hero .alvo:nth-of-type(2) .mk { animation-delay: .12s; }
   @keyframes surge { from { transform: scale(.4); } to { transform: scale(1); } }
 }
+
+/* Etapas, cores de apoio e marcações do Studio (seção #studio). */
+.etapas { display: grid; gap: 8px; }
+.etapa { display: grid; grid-template-columns: 160px minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; align-items: center; padding: 12px 14px; border: 1px solid var(--linha); border-radius: 8px; background: var(--superficie); font-size: 14px; }
+.etapa .mono { color: var(--grafite); font-size: 12px; }
+.etapa-nome { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-family: var(--f-display); font-size: 16px; }
+.bolinha { width: 10px; height: 10px; border-radius: 50%; background: var(--c); flex: none; }
+.bolinha.vazia { background: transparent; border: 2px solid var(--c); }
+.lista-marcacao { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 65ch; }
+.hl-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.hl-amostra { display: grid; gap: 6px; }
+.regras td.mono { white-space: nowrap; }
+.hl-caixa { display: block; padding: 10px 12px; border-radius: 2px; color: #151A33; background-color: #FFFFFF; font-size: 14px; }
+@media (max-width: 720px) { .etapa { grid-template-columns: 1fr; gap: 4px; } }
 </style>
 </head>
 <body>
@@ -565,6 +600,84 @@ footer { padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: spa
           <div style="flex:25;background:#151A33;color:#F5F6FA">nanquim 25%</div>
           <div style="flex:10;background:#2B4FE0;color:#FFFFFF">10%</div>
           <div style="flex:5;background:#FFD43B;color:#151A33">5%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio">
+    <span class="rot">No Studio</span>
+    <div class="corpo">
+      <h2>Etapas, cores de apoio e marcações</h2>
+      <p class="lead">O Studio usa cor para dizer em que ponto a página está e o que cada aviso pede. Cor nunca vai sozinha: sempre tem o nome escrito ao lado. Valores de <code>web/src/styles/tokens.css</code>.</p>
+
+      <div style="display:grid;gap:12px">
+        <h3>Etapas da página</h3>
+        <p>Quatro etapas, do rascunho ao manual entregue. Rascunho é a padrão e usa anel vazio, para a forma também diferenciar. O amarelo fica fora: é só do conteúdo realçado e da página ativa.</p>
+        <div class="etapas">
+          <div class="etapa"><span class="etapa-nome" style="color:var(--grafite)"><i class="bolinha vazia" style="--c:var(--grafite)"></i>Rascunho</span><span>Ainda sendo escrita</span><span class="mono">--grafite · #575E78 (5,93:1) claro · #9CA3BD (6,87:1) escuro</span></div>
+          <div class="etapa"><span class="etapa-nome" style="color:var(--cor-orange)"><i class="bolinha" style="--c:var(--cor-orange)"></i>Em revisão</span><span>Pronta para alguém conferir</span><span class="mono">--cor-orange · #B04A00 (5,08:1) claro · #FFA95E (9,08:1) escuro</span></div>
+          <div class="etapa"><span class="etapa-nome" style="color:var(--cor-green)"><i class="bolinha" style="--c:var(--cor-green)"></i>Aprovado</span><span>Aprovada, pode ir para o manual</span><span class="mono">--cor-green · #17793A (5,07:1) claro · #6FD193 (9,18:1) escuro</span></div>
+          <div class="etapa"><span class="etapa-nome" style="color:var(--cobalto)"><i class="bolinha" style="--c:var(--cobalto)"></i>Publicado</span><span>Publicada, já está no manual entregue</span><span class="mono">--cobalto · #2B4FE0 (5,90:1) claro · #7088FF (5,45:1) escuro</span></div>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:12px">
+        <h3>Cores semânticas</h3>
+        <p>Seis cores para o texto escolhido na barra da seleção e para os avisos do manual. Cada uma tem um valor para o tema claro e outro para o escuro. A razão é o menor contraste contra o papel e a superfície do tema; o mínimo é 4,5:1.</p>
+        <div class="tab-scroll">
+          <table class="regras">
+            <thead><tr><th>Cor</th><th>Token</th><th>Claro</th><th>Escuro</th></tr></thead>
+            <tr><th><span style="color:var(--cor-gray)">Cinza</span></th><td class="mono">--cor-gray</td><td class="mono">#5C6478 · 5,48:1</td><td class="mono">#A3AAC4 · 7,45:1</td></tr>
+            <tr><th><span style="color:var(--cor-red)">Vermelho</span></th><td class="mono">--cor-red</td><td class="mono">#C3261B · 5,38:1</td><td class="mono">#FF8B7E · 7,57:1</td></tr>
+            <tr><th><span style="color:var(--cor-orange)">Laranja</span></th><td class="mono">--cor-orange</td><td class="mono">#B04A00 · 5,08:1</td><td class="mono">#FFA95E · 9,08:1</td></tr>
+            <tr><th><span style="color:var(--cor-green)">Verde</span></th><td class="mono">--cor-green</td><td class="mono">#17793A · 5,07:1</td><td class="mono">#6FD193 · 9,18:1</td></tr>
+            <tr><th><span style="color:var(--cor-blue)">Azul</span></th><td class="mono">--cor-blue</td><td class="mono">#1F58D6 · 5,68:1</td><td class="mono">#8EB1FF · 8,09:1</td></tr>
+            <tr><th><span style="color:var(--cor-purple)">Roxo</span></th><td class="mono">--cor-purple</td><td class="mono">#7A3CC8 · 5,88:1</td><td class="mono">#C9A2FF · 8,27:1</td></tr>
+          </table>
+        </div>
+        <div class="tab-scroll">
+          <table class="regras">
+            <thead><tr><th>Aviso do manual</th><th>Cor</th></tr></thead>
+            <tr><th>Dica</th><td><span class="mono">--aviso-tip</span> = verde</td></tr>
+            <tr><th>Atenção</th><td><span class="mono">--aviso-warning</span> = laranja</td></tr>
+            <tr><th>Cuidado</th><td><span class="mono">--aviso-caution</span> = vermelho</td></tr>
+            <tr><th>Nota</th><td><span class="mono">--aviso-note</span> = cobalto</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:12px">
+        <h3>Marcações sobre o print</h3>
+        <p>O padrão é o do brand book: número em círculo cobalto e destaque em marca-texto. Cada marcador, seta, destaque e área pode ter estilo próprio (cor, tamanho, espessura e borda); o que não é mudado herda do padrão da imagem. Marcação nova nasce com o padrão da imagem.</p>
+        <ul class="lista-marcacao">
+          <li><strong>Cor do marcador, seta e área:</strong> cobalto (padrão), tinta, vermelho, verde, roxo e laranja.</li>
+          <li><strong>Destaque:</strong> paleta própria de marca-texto, com cinco cores e preenchimento cheio, suave ou sem.</li>
+          <li><strong>Borda:</strong> nenhuma, fina (1 px), normal (2 px) ou grossa (3 px). &ldquo;Nenhuma borda&rdquo; vale para os quatro tipos. Destaque sem preenchimento e sem borda não existe: a borda volta a fina.</li>
+        </ul>
+        <div class="hl-grade">
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#ffd43b8c,#ffd43b8c),#FFFFFF;border:2px solid #8a6d00">Texto do print</span><span class="mono">Amarelo</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#5ed38a8c,#5ed38a8c),#FFFFFF;border:2px solid #1a7a3c">Texto do print</span><span class="mono">Verde</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#ff7eb68c,#ff7eb68c),#FFFFFF;border:2px solid #b0245f">Texto do print</span><span class="mono">Rosa</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#6cb8ff8c,#6cb8ff8c),#FFFFFF;border:2px solid #1d5fa8">Texto do print</span><span class="mono">Azul</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#ffab5e8c,#ffab5e8c),#FFFFFF;border:2px solid #a84400">Texto do print</span><span class="mono">Laranja</span></div>
+        </div>
+        <div class="hl-grade">
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#FFD43B8C,#FFD43B8C),#FFFFFF;border:2px solid #8A6D00">Com borda</span><span class="mono">Borda normal</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:#FFD43B8C">Sem borda</span><span class="mono">Nenhuma borda</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#FFD43B40,#FFD43B40),#FFFFFF;border:2px solid #8A6D00">Suave</span><span class="mono">Preenchimento suave</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="border:2px solid #8A6D00">Sem preench.</span><span class="mono">Só contorno</span></div>
+        </div>
+        <p>Contraste da paleta de marca-texto: texto nanquim <span class="mono">#151A33</span> sobre o preenchimento (cheio 55%, suave 25%, sobre branco), mínimo 4,5:1; borda contra branco, mínimo 3:1. A marcação fica no print, que não troca de tema; no fundo escuro a borda de rosa, azul e laranja fica abaixo de 3:1 (achado, vira ticket), e o preenchimento segura o destaque.</p>
+        <div class="tab-scroll">
+          <table class="regras">
+            <thead><tr><th>Cor</th><th>Preenchimento</th><th>Borda</th><th>Texto no cheio</th><th>Texto no suave</th><th>Borda no claro</th><th>Borda no escuro</th></tr></thead>
+            <tr><th>Amarelo</th><td class="mono">#FFD43B</td><td class="mono">#8A6D00</td><td class="mono">13,97:1</td><td class="mono">15,57:1</td><td class="mono">4,92:1</td><td class="mono">3,49:1</td></tr>
+            <tr><th>Verde</th><td class="mono">#5ED38A</td><td class="mono">#1A7A3C</td><td class="mono">12,05:1</td><td class="mono">14,60:1</td><td class="mono">5,39:1</td><td class="mono">3,19:1</td></tr>
+            <tr><th>Rosa</th><td class="mono">#FF7EB6</td><td class="mono">#B0245F</td><td class="mono">10,67:1</td><td class="mono">13,85:1</td><td class="mono">6,43:1</td><td class="mono">2,67:1</td></tr>
+            <tr><th>Azul</th><td class="mono">#6CB8FF</td><td class="mono">#1D5FA8</td><td class="mono">11,46:1</td><td class="mono">14,32:1</td><td class="mono">6,45:1</td><td class="mono">2,66:1</td></tr>
+            <tr><th>Laranja</th><td class="mono">#FFAB5E</td><td class="mono">#A84400</td><td class="mono">12,14:1</td><td class="mono">14,66:1</td><td class="mono">6,01:1</td><td class="mono">2,86:1</td></tr>
+          </table>
         </div>
       </div>
     </div>
