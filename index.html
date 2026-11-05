@@ -668,15 +668,23 @@ footer { padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: spa
           <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#FFD43B40,#FFD43B40),#FFFFFF;border:2px solid #8A6D00">Suave</span><span class="mono">Preenchimento suave</span></div>
           <div class="hl-amostra"><span class="hl-caixa" style="border:2px solid #8A6D00">Sem preench.</span><span class="mono">Só contorno</span></div>
         </div>
-        <p>Contraste da paleta de marca-texto: texto nanquim <span class="mono">#151A33</span> sobre o preenchimento (cheio 55%, suave 25%, sobre branco), mínimo 4,5:1; borda contra branco, mínimo 3:1. A marcação fica no print, que não troca de tema; no fundo escuro a borda de rosa, azul e laranja fica abaixo de 3:1 (achado, vira ticket), e o preenchimento segura o destaque.</p>
+        <p>No Studio escuro a borda do destaque vira a própria cor do preenchimento, que contrasta bem mais com a superfície escura <span class="mono">#161A2E</span> do que a borda do claro. O export é sempre claro e fica com a borda escura. Valores de <code>HIGHLIGHT_PALETTE</code> (<code>web/src/lib/annotationStyle.ts</code>), tokens <span class="mono">--hl-fundo</span> e <span class="mono">--hl-borda</span>.</p>
+        <div class="hl-grade" style="background:#161A2E;padding:12px;border-radius:8px">
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#ffd43b8c,#ffd43b8c),#FFFFFF;border:2px solid #ffd43b">Texto do print</span><span class="mono" style="color:#F5F6FA">Amarelo</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#5ed38a8c,#5ed38a8c),#FFFFFF;border:2px solid #5ed38a">Texto do print</span><span class="mono" style="color:#F5F6FA">Verde</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#ff7eb68c,#ff7eb68c),#FFFFFF;border:2px solid #ff7eb6">Texto do print</span><span class="mono" style="color:#F5F6FA">Rosa</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#6cb8ff8c,#6cb8ff8c),#FFFFFF;border:2px solid #6cb8ff">Texto do print</span><span class="mono" style="color:#F5F6FA">Azul</span></div>
+          <div class="hl-amostra"><span class="hl-caixa" style="background:linear-gradient(#ffab5e8c,#ffab5e8c),#FFFFFF;border:2px solid #ffab5e">Texto do print</span><span class="mono" style="color:#F5F6FA">Laranja</span></div>
+        </div>
+        <p>Contraste medido por script: texto nanquim <span class="mono">#151A33</span> sobre o preenchimento (cheio 55%, suave 25%, sobre branco), mínimo 4,5:1; borda contra branco no claro e contra a superfície escura <span class="mono">#161A2E</span> no escuro, mínimo 3:1. As cinco cores passam nos dois temas; contra o fundo <span class="mono">#0E1120</span> o menor valor da borda escura é 7,96:1.</p>
         <div class="tab-scroll">
           <table class="regras">
-            <thead><tr><th>Cor</th><th>Preenchimento</th><th>Borda</th><th>Texto no cheio</th><th>Texto no suave</th><th>Borda no claro</th><th>Borda no escuro</th></tr></thead>
-            <tr><th>Amarelo</th><td class="mono">#FFD43B</td><td class="mono">#8A6D00</td><td class="mono">13,97:1</td><td class="mono">15,57:1</td><td class="mono">4,92:1</td><td class="mono">3,49:1</td></tr>
-            <tr><th>Verde</th><td class="mono">#5ED38A</td><td class="mono">#1A7A3C</td><td class="mono">12,05:1</td><td class="mono">14,60:1</td><td class="mono">5,39:1</td><td class="mono">3,19:1</td></tr>
-            <tr><th>Rosa</th><td class="mono">#FF7EB6</td><td class="mono">#B0245F</td><td class="mono">10,67:1</td><td class="mono">13,85:1</td><td class="mono">6,43:1</td><td class="mono">2,67:1</td></tr>
-            <tr><th>Azul</th><td class="mono">#6CB8FF</td><td class="mono">#1D5FA8</td><td class="mono">11,46:1</td><td class="mono">14,32:1</td><td class="mono">6,45:1</td><td class="mono">2,66:1</td></tr>
-            <tr><th>Laranja</th><td class="mono">#FFAB5E</td><td class="mono">#A84400</td><td class="mono">12,14:1</td><td class="mono">14,66:1</td><td class="mono">6,01:1</td><td class="mono">2,86:1</td></tr>
+            <thead><tr><th>Cor</th><th>Preenchimento</th><th>Borda</th><th>Texto no cheio</th><th>Texto no suave</th><th>Borda no claro</th><th>Borda no escuro (sobre #161A2E)</th></tr></thead>
+            <tr><th>Amarelo</th><td class="mono">#FFD43B</td><td class="mono">#8A6D00</td><td class="mono">13,97:1</td><td class="mono">15,57:1</td><td class="mono">#8A6D00 · 4,92:1</td><td class="mono">#FFD43B · 12,06:1</td></tr>
+            <tr><th>Verde</th><td class="mono">#5ED38A</td><td class="mono">#1A7A3C</td><td class="mono">12,05:1</td><td class="mono">14,60:1</td><td class="mono">#1A7A3C · 5,39:1</td><td class="mono">#5ED38A · 9,14:1</td></tr>
+            <tr><th>Rosa</th><td class="mono">#FF7EB6</td><td class="mono">#B0245F</td><td class="mono">10,67:1</td><td class="mono">13,85:1</td><td class="mono">#B0245F · 6,43:1</td><td class="mono">#FF7EB6 · 7,30:1</td></tr>
+            <tr><th>Azul</th><td class="mono">#6CB8FF</td><td class="mono">#1D5FA8</td><td class="mono">11,46:1</td><td class="mono">14,32:1</td><td class="mono">#1D5FA8 · 6,45:1</td><td class="mono">#6CB8FF · 8,14:1</td></tr>
+            <tr><th>Laranja</th><td class="mono">#FFAB5E</td><td class="mono">#A84400</td><td class="mono">12,14:1</td><td class="mono">14,66:1</td><td class="mono">#A84400 · 6,01:1</td><td class="mono">#FFAB5E · 9,20:1</td></tr>
           </table>
         </div>
       </div>
