@@ -27,4 +27,6 @@ Ficam em [`logo/`](logo/). Os SVGs têm as letras convertidas em contorno, entã
 
 A pasta [`discovery/`](discovery/) guarda a entrevista de marca que deu origem ao brand book: [`90_SYNTHESIS.md`](discovery/90_SYNTHESIS.md) é a síntese e a fonte da verdade para site, README, app e blog; [`modules/`](discovery/modules/) tem os módulos de propósito, posicionamento, público, personalidade, voz e narrativa.
 
+O módulo 70 (tensão do fundador) é privado: fica fora do git (`.gitignore`) e não é publicado.
+
 Um projeto [codesampa.io](https://codesampa.io).
